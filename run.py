@@ -18,4 +18,67 @@ class Hangman:
         display_word (str): The word as it appears to the player, with underscores representing unguessed letters.
         hangman_states (list): A list of art representations of the hangman as it is being drawn.
         """
-          
+        self.word_list = word_list
+        self.word = ""
+        self.guesses = []
+        self.guesses_num = 6
+        self.guesses_current = 0
+        self.word_display = ""
+        self.states_hangman = [
+            """
+             +---+
+             |   |
+                 |
+                 |
+                 |
+                 |
+            =========""",
+            """
+             +---+
+             |   |
+             O   |
+                 |
+                 |
+                 |
+            =========""",
+            """
+             +---+
+             |   |
+             O   |
+             |   |
+                 |
+                 |
+            =========""",
+            """
+             +---+
+             |   |
+             O   |
+            /|   |
+                 |
+                 |
+            =========""",
+            """
+             +---+
+             |   |
+             O   |
+            /|\\  |
+                 |
+                 |
+            =========""",
+            """
+             +---+
+             |   |
+             O   |
+            /|\\  |
+            /    |
+                 |
+            =========""",
+            """
+             +---+
+             |   |
+             O   |
+            /|\\  |
+            / \\  |
+                 |
+            ========="""
+        ]
