@@ -88,6 +88,7 @@ class Hangman:
         Write a welcoem message to the user when starting the game.
         """
         print("Welcome to Hangman Game!")
+        print("\n")
         print("Guess the word before the hangman is fully drawn.")
         print("Remember you have 6 guesses only.")
         print("Quick Hint: think about fruites.")
