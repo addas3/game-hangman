@@ -137,6 +137,7 @@ class Hangman:
                 elif self.word_display == self.word:
                     print("WOOW Congratulations! You guessed the word!")
                     break
+            print("\n")  # create a space before the prompt for the player to play again
             play_again = input("Do you want to give your self another try? (y/n):")
             if play_again.lower() != "y":
                 break
