@@ -134,4 +134,22 @@ class Hangman:
                 print("WOOW Congratulations! You guessed the word!")
                 break
 
+word_list = [ 'apple',
+    'banana', 
+    'blackberry', 
+    'cherry', 
+    'lemon', 
+    'kiwi', 
+    'orange', 
+    'grapes', 
+    'lime', 
+    'mango', 
+    'peach',
+    'pineapple',
+    'raisins',
+    'strawberry',
+    'watermelon']
+game = Hangman(word_list)
+game.play()
+
 
