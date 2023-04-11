@@ -141,6 +141,7 @@ class Hangman:
             play_again = input("Do you want to give your self another try? (y/n):")
             if play_again.lower() != "y":
                 break
+            print("\n") # create a space after the prompt for the player to play again
     
 
 word_list = [ 'apple',
