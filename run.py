@@ -98,3 +98,25 @@ class Hangman:
         """
         self.word = random.choice(self.word_list)
         self.word_display = "_" * len(self.word)
+
+    def guess(self):
+        """
+        Gets a guess from the player and update the display_word and guesses attributes based on the guess.
+        """
+        guess = input("Guess a letter: ")
+        if guess in self.guesses:
+            print("You have already guessed that letter. Try again.")
+        else:
+            self.guesses.append(guess)
+            if guess in self.word:
+                for i in range(len(self.word)):
+                    if guess == self.word[i]:
+                        self.word_display = self.word_display[:i] + guess + self.word_display[i+1:]
+                print(f"Correct Answer! {self.word_display}")
+            else:
+                self.guesses_current += 1
+                print(f"Incorrect Answer. you have {self.guesses_num - self.guesses_current} guesses left.")
+                print(self.states_hangman[self.guesses_current])
+                print(self.word_display)
+
+
