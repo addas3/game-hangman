@@ -107,6 +107,9 @@ class Hangman:
         Gets a guess from the player and update the word_display and guesses attributes based on the guess.
         """
         guess = input("Guess a letter: ")
+        if not guess.isalpha():
+            print("Invalid input. Please enter a letter.")
+            return
         if guess in self.guesses:
             print("You have already guessed that letter. Try again.")
         else:
