@@ -1,7 +1,7 @@
 import random
 
-class Hangman:
 
+class Hangman:
 
     def __init__(self, word_list):
         """
@@ -82,6 +82,7 @@ class Hangman:
                  |
             ========="""
         ]
+
     def intro(self):
         """
         Write a welcoem message to the user when starting the game.
@@ -90,3 +91,10 @@ class Hangman:
         print("Guess the word before the hangman is fully drawn")
         print("Remember you have 6 guesses only")
         print("Good Luck!!")
+
+    def word_choose(self):
+        """
+        Chooses a word at random from the list of possible words and initializes the display_word attribute.
+        """
+        self.word = random.choice(self.word_list)
+        self.word_display = "_" * len(self.word)
