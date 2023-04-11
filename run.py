@@ -101,7 +101,7 @@ class Hangman:
 
     def guess(self):
         """
-        Gets a guess from the player and update the display_word and guesses attributes based on the guess.
+        Gets a guess from the player and update the word_display and guesses attributes based on the guess.
         """
         guess = input("Guess a letter: ")
         if guess in self.guesses:
@@ -118,5 +118,20 @@ class Hangman:
                 print(f"Incorrect Answer. you have {self.guesses_num - self.guesses_current} guesses left.")
                 print(self.states_hangman[self.guesses_current])
                 print(self.word_display)
+    
+    def play(self):
+        """
+        Plays a game of Hangman. Calls the intro, word_choose, and guess methods untill the game is won or lost.
+        """
+        self.intro()
+        self.word_choose()
+        while True:
+            self.guess()
+            if self.guesses_current == self.guesses_num:
+                print("Soory you lost! The word was", self.word)
+                break
+            elif self.word_display == self.word:
+                print("WOOW Congratulations! You guessed the word!")
+                break
 
 
