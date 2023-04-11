@@ -88,9 +88,11 @@ class Hangman:
         Write a welcoem message to the user when starting the game.
         """
         print("Welcome to Hangman Game!")
-        print("Guess the word before the hangman is fully drawn")
-        print("Remember you have 6 guesses only")
+        print("Guess the word before the hangman is fully drawn.")
+        print("Remember you have 6 guesses only.")
+        print("Quick Hint: think about fruites.")
         print("Good Luck!!")
+        print("\n")
 
     def word_choose(self):
         """
@@ -122,17 +124,23 @@ class Hangman:
     def play(self):
         """
         Plays a game of Hangman. Calls the intro, word_choose, and guess methods untill the game is won or lost.
+        Asks the player if they want to play again after the game is over.
         """
-        self.intro()
-        self.word_choose()
         while True:
-            self.guess()
-            if self.guesses_current == self.guesses_num:
-                print("Soory you lost! The word was", self.word)
+            self.intro()
+            self.word_choose()
+            while True:
+                self.guess()
+                if self.guesses_current == self.guesses_num:
+                    print("Soory you lost! The word was", self.word)
+                    break
+                elif self.word_display == self.word:
+                    print("WOOW Congratulations! You guessed the word!")
+                    break
+            play_again = input("Do you want to give your self another try? (y/n):")
+            if play_again.lower() != "y":
                 break
-            elif self.word_display == self.word:
-                print("WOOW Congratulations! You guessed the word!")
-                break
+    
 
 word_list = [ 'apple',
     'banana', 
