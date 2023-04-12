@@ -161,6 +161,8 @@ class Hangman:
                                "(y/n):")
             if play_again.lower() != "y":
                 break
+            else:
+                self.reset_variables()
             print("\n")
 
 

@@ -77,6 +77,10 @@ The class has methods to introduce the game to the user, choose a word at random
 
 Overall, the data model represents a simple game with a clear objective: guessing a word before the hangman is fully drawn. The game's state is updated based on the player's input, and the game ends when the player has used all their guesses or correctly guessed the word. The class's attributes and methods encapsulate the game's state and behavior, making it easy to reuse and extend the code.
 
+* Below it shows my Flow Chart for the Hangman Game
+
+![flow chart](docs/readme_images/flow_chart.jpeg)
+
 ### Testing
 
 I have manually tested this game by doing the following:
@@ -101,6 +105,8 @@ Overall, I manually tested the game by playing it multiple times and verifying t
 
 * Player was able to put numbers also for guessing the word. I fixed it by adding guess.isalpha() so incase the player input number will get error saying "Invalid input. Please enter a letter." 
 * The game was not running and I discover it was because my indication for game.play() was not right. I fixed it and it started working
+* When the game ends and I reset the game and I was getting the welcome message however it was showing me already that I am lost. I fix it by adding def reset_variables.
+* When player write letter in capital letter it was not working and player was able to write multiple letters without issue. I fix it by adding .lower() to the guess variabile and adding "or len(guess) > 1" for the "if not guess.isalpha()"
 
 ### Remaining Bugs
 
@@ -109,7 +115,7 @@ Overall, I manually tested the game by playing it multiple times and verifying t
 ### Validator Testing
 
 * PEP8
-  * Few errors was there but I managed it to fix it. Now no errors were returned from pep8ci.herokuapp.com
+  * Few errors were returned from pep8ci.herokuapp.com for line too long will fix it in the new release
 
 ### Deployment
 
