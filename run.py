@@ -108,7 +108,6 @@ class Hangman:
         self.word = random.choice(self.word_list)
         self.word_display = "_" * len(self.word)
 
-
     def reset_variables(self):
         self.word = ""
         self.guesses = []
@@ -121,8 +120,8 @@ class Hangman:
         Gets a guess from the player and update the word_display and guesses
         attributes based on the guess.
         """
-        guess = input("Guess a letter: ")
-        if not guess.isalpha():
+        guess = input("Guess a letter: ").lower()
+        if not guess.isalpha() or len(guess) > 1:
             print("Invalid input. Please enter a letter.")
             return
         if guess in self.guesses:
@@ -136,8 +135,7 @@ class Hangman:
                 print(f"Correct Answer! {self.word_display}")
             else:
                 self.guesses_current += 1
-                print(f"Incorrect Answer. you have 
-                     {self.guesses_num - self.guesses_current} guesses left.")
+                print(f"Incorrect Answer. you have {self.guesses_num - self.guesses_current} guesses left.")
                 print(self.states_hangman[self.guesses_current])
                 print(self.word_display)
 
