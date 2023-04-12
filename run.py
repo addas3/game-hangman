@@ -108,6 +108,14 @@ class Hangman:
         self.word = random.choice(self.word_list)
         self.word_display = "_" * len(self.word)
 
+
+    def reset_variables(self):
+        self.word = ""
+        self.guesses = []
+        self.guesses_num = 6
+        self.guesses_current = 0
+        self.word_display = ""
+
     def guess(self):
         """
         Gets a guess from the player and update the word_display and guesses
@@ -128,7 +136,8 @@ class Hangman:
                 print(f"Correct Answer! {self.word_display}")
             else:
                 self.guesses_current += 1
-                print(f"Incorrect Answer. you have {self.guesses_num - self.guesses_current} guesses left.")
+                print(f"Incorrect Answer. you have 
+                     {self.guesses_num - self.guesses_current} guesses left.")
                 print(self.states_hangman[self.guesses_current])
                 print(self.word_display)
 
