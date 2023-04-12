@@ -56,6 +56,19 @@ At the beginning of the game, a welcome message is displayed along with the rule
 * Allow player to select categories
 * Give more chances for the player
 
+## Technologies
+
+* Python
+    * The Website was animated using custom Python in an external file.    
+* GitHub
+    * Source code is hosted on GitHub and delpoyed using Git Pages.
+* Git 
+    * Used to commit and push code during the development opf the Website
+* Heroku
+    * Source code is hosted on Heroku and delpoyed.
+* Tinyjpg
+    * https://tinyjpg.com/ was used to reduce the size of the images used throughout the website
+
 ## Data Model 
 
 The data model for the Hangman game consists of several attributes and methods. The Hangman class has a constructor that takes a list of words as a parameter and initializes several attributes, including the word to be guessed, the list of guessed letters, the number of allowed guesses, the number of incorrect guesses made by the player, the display word with underscores representing unguessed letters, and a list of art representations of the hangman as it is being drawn.
