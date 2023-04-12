@@ -82,6 +82,39 @@ I have manually tested this game by doing the following:
 
 Overall, I manually tested the game by playing it multiple times and verifying that it functioned correctly according to the rules and gameplay.
 
+### Bugs
+
+### Solved Bugs
+
+* Player was able to put numbers also for guessing the word. I fixed it by adding guess.isalpha() so incase the player input number will get error saying "Invalid input. Please enter a letter." 
+* The game was not running and I discover it was because my indication for game.play() was not right. I fixed it and it started working
+
+### Remaining Bugs
+
+* No bugs remaining
+
+### Validator Testing
+
+* PEP8
+  * Few errors was there but I managed it to fix it. Now no errors were returned from pep8ci.herokuapp.com
+
+### Deployment
+
+This project was deoplyed using Code Institut's mock terminal for Heroku
+
+* Steps for deployment:
+    * Fork or clone this repository
+    * Create a new Heroku app
+    * Set the buildbacks to Python and NodeJS in that order
+    * Link the Heroku app to the repository
+    * Click on Deploy
+
+### Credits
+
+* Code Institute for the deployment terminal
+* Code Institute Love Sandwishes Project for inspiration and practice
+* Code Institute Battleship Game Project for inspiration and practice
+
 
 
 
