@@ -97,6 +97,21 @@ I have manually tested this game by doing the following:
 * If I chose to play again, the game started over from the beginning with a new word to guess.
 * I repeated steps 3-10 until you were finished playing.
 
+I tested several situations:
+
+* I wrote number and I got error message as expected.
+
+![number error](docs/testing/number_error.jpg)
+
+* I wrote multiple letters and also I got error as expected.
+
+![multiple letters error](docs/testing/multiple_letters_error.jpg)
+
+* I wrote capital letter and got answer as expected.
+
+![writting capital letter](docs/testing/writting_capital_letter.jpg)
+
+
 Overall, I manually tested the game by playing it multiple times and verifying that it functioned correctly according to the rules and gameplay.
 
 ### Bugs
@@ -115,7 +130,9 @@ Overall, I manually tested the game by playing it multiple times and verifying t
 ### Validator Testing
 
 * PEP8
-  * Few errors were returned from pep8ci.herokuapp.com for line too long will fix it in the new release
+  * Two errors were returned from pep8ci.herokuapp.com for line too long will fix it in the new release.
+
+![pep8 test](docs/testing/pep8_test.jpg)
 
 ### Deployment
 
@@ -130,9 +147,10 @@ This project was deoplyed using Code Institut's mock terminal for Heroku
 
 ### Credits
 
-* Code Institute for the deployment terminal
-* Code Institute Love Sandwishes Project for inspiration and practice
-* Code Institute Battleship Game Project for inspiration and practice
+* Code Institute for the deployment terminal.
+* Code Institute Love Sandwishes Project for inspiration and practice.
+* Code Institute Battleship Game Project for inspiration and practice.
+* Slack groups it gives me good inspiration.  
 
 
 
